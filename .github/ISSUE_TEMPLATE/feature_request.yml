@@ -1,0 +1,20 @@
+name: "Feature Request"
+description: "Suggest an idea or improvement"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: "A clear and concise description of what feature or block you would like to see."
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case / Why is this needed?
+      description: "Explain how this would improve the mod."
+    validations:
+      required: true
+

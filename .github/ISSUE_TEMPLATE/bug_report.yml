@@ -1,0 +1,54 @@
+name: "Bug Report"
+description: "Report a bug or problem you encountered"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide as much detail as possible.
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod Loader
+      options:
+        - NeoForge
+        - Fabric
+    validations:
+      required: true
+  - type: dropdown
+    id: mc_version
+    attributes:
+      label: Minecraft Version
+      options:
+        - 26.3
+        - 26.2
+        - 1.21.4
+        - 1.21.1
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: "A clear and concise description of what the bug is."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: "How can we reproduce the problem?"
+      placeholder: |
+        1. Place a Crusher block
+        2. Feed item through belt
+        3. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Crash Log / Latest Log
+      description: "Paste your crash report or link to pastebin / mclo.gs here."
+      render: shell
+
